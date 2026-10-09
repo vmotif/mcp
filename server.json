@@ -1,0 +1,11 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.vmotif/vmotif",
+  "title": "Vmotif",
+  "description": "Design canvas for AI assets: generate images, video, code and screens, and edit canvases.",
+  "version": "1.0.0",
+  "websiteUrl": "https://vmotif.com/docs/mcp",
+  "repository": { "url": "https://github.com/vmotif/mcp", "source": "github" },
+  "icons": [{ "src": "https://vmotif.com/icon.svg", "sizes": "any", "mimeType": "image/svg+xml" }],
+  "remotes": [{ "type": "streamable-http", "url": "https://vmotif.com/api/mcp" }]
+}

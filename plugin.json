@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vmotif",
+  "version": "1.0.0",
+  "description": "Work on Vmotif design canvases from your agent: read and edit canvases, generate images, video, code, SVG, shaders and HTML screens, and run saved workflows. Results land on a canvas next to the prompts and references that made them.",
+  "author": { "name": "Webrenew", "url": "https://vmotif.com" },
+  "homepage": "https://vmotif.com",
+  "repository": "https://github.com/vmotif/mcp",
+  "license": "MIT",
+  "keywords": ["design", "canvas", "image-generation", "video-generation", "code-generation", "svg", "shader", "mcp"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Vmotif",
+        "shortDescription": "Design canvas for AI assets",
+        "longDescription": "Vmotif is a node-based design canvas. Connect it and ChatGPT can work on your canvases with you: read a canvas, add and connect nodes, start image, video, code, SVG, shader and HTML screen generations with the models your plan includes, and run your saved workflows. Every result lands on a canvas you can open at vmotif.com, next to the prompt and reference images that made it.\n\nPaid work (generations, captures, site scrapes, workflow runs) spends your plan's GPU wallet, and ChatGPT asks which workspace to bill when you have more than one. Reading canvases, models and usage is free. Requires a Vmotif Pro, Team or Enterprise plan.",
+        "developerName": "Webrenew",
+        "category": "Creativity",
+        "websiteURL": "https://vmotif.com",
+        "privacyPolicyURL": "https://vmotif.com/privacy",
+        "termsOfServiceURL": "https://vmotif.com/terms",
+        "supportURL": "https://vmotif.com/docs/support",
+        "defaultPrompt": [
+          "Make three hero images for my landing page on a new Vmotif canvas",
+          "What's on my most recent Vmotif canvas?",
+          "How much of my Vmotif GPU wallet is left?"
+        ],
+        "logo": "./assets/logo-light.png",
+        "logoDark": "./assets/logo.png",
+        "composerIcon": "./assets/composer-icon-light.png",
+        "composerIconDark": "./assets/composer-icon.png"
+      }
+    }
+  }
+}
