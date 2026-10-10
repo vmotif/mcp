@@ -3,7 +3,7 @@
   "name": "com.vmotif/vmotif",
   "title": "Vmotif",
   "description": "Design canvas for AI assets: generate images, video, code and screens, and edit canvases.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://vmotif.com/docs/mcp",
   "repository": { "url": "https://github.com/vmotif/mcp", "source": "github" },
   "icons": [
