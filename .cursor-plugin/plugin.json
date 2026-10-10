@@ -8,7 +8,7 @@
   "homepage": "https://vmotif.com",
   "repository": "https://github.com/vmotif/mcp",
   "license": "MIT",
-  "logo": "./assets/logo.png",
+  "logo": "https://raw.githubusercontent.com/vmotif/mcp/main/assets/logo.png",
   "keywords": ["design", "canvas", "image-generation", "video-generation", "code-generation", "svg", "shader"],
   "mcpServers": "./mcp.json"
 }

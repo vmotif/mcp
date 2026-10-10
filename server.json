@@ -6,6 +6,10 @@
   "version": "1.0.0",
   "websiteUrl": "https://vmotif.com/docs/mcp",
   "repository": { "url": "https://github.com/vmotif/mcp", "source": "github" },
-  "icons": [{ "src": "https://vmotif.com/icon.svg", "sizes": ["any"], "mimeType": "image/svg+xml" }],
+  "icons": [
+    { "src": "https://raw.githubusercontent.com/vmotif/mcp/main/assets/icon-512.png", "sizes": ["512x512"], "mimeType": "image/png" },
+    { "src": "https://raw.githubusercontent.com/vmotif/mcp/main/assets/icon-48.png", "sizes": ["48x48"], "mimeType": "image/png" },
+    { "src": "https://vmotif.com/icon.svg", "sizes": ["any"], "mimeType": "image/svg+xml" }
+  ],
   "remotes": [{ "type": "streamable-http", "url": "https://vmotif.com/api/mcp" }]
 }
