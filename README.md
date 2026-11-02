@@ -41,11 +41,47 @@ codex mcp login vmotif
 
 Requires a Vmotif Pro, Team or Enterprise plan. Generations, captures, site scrapes and workflow runs spend your plan's GPU wallet; reading canvases, models and usage is free. If you belong to more than one workspace, the agent asks which one to bill.
 
+## Tools
+
+The server exposes 26 tools. **Read-only** tools never change anything; **Writes** tools create or edit canvas content; **Destructive** tools can replace or remove existing content. Tools marked *Spends wallet* draw on your plan's GPU wallet. Parameters and return shapes: https://vmotif.com/docs/mcp
+
+<!-- tools:start -->
+| Tool | Title | Access | Spends wallet |
+|---|---|---|---|
+| `add_canvas_nodes` | Add canvas nodes | Writes |  |
+| `add_generation_to_project` | Add generation to project | Writes |  |
+| `add_premade_workflow` | Add premade workflow | Writes |  |
+| `create_canvas` | Create canvas | Writes |  |
+| `create_image_upload` | Create image upload | Writes |  |
+| `generate_code` | Generate code | Writes | Yes |
+| `generate_image` | Generate image | Writes | Yes |
+| `generate_video` | Generate video | Writes | Yes |
+| `get_favorite_projects` | Get favorite projects | Read-only |  |
+| `get_generation` | Get generation | Read-only |  |
+| `get_node_status` | Get node status | Read-only |  |
+| `get_usage` | Get usage | Read-only |  |
+| `get_workflow` | Get workflow | Read-only |  |
+| `get_workflow_run` | Get workflow run | Read-only |  |
+| `list_client_brands` | List brands | Read-only |  |
+| `list_models` | List models | Read-only |  |
+| `list_premade_workflows` | List premade workflows | Read-only |  |
+| `list_projects` | List projects | Read-only |  |
+| `list_workflows` | List workflows | Read-only |  |
+| `list_workspaces` | List workspaces | Read-only |  |
+| `read_canvas` | Read canvas | Read-only |  |
+| `run_capture` | Run capture | Writes | Yes |
+| `run_site_scrape` | Run site scrape | Destructive | Yes |
+| `run_workflow` | Run workflow | Writes | Yes |
+| `transform_image` | Transform image | Writes |  |
+| `update_canvas` | Update canvas | Destructive |  |
+<!-- tools:end -->
+
 ## What's here
 
 | File | For |
 |---|---|
 | `plugin.json`, `mcp.json` | Agent Plugins manifest (ChatGPT, Codex) |
+| `.mcp.json` | Project-scoped config for clients that read it from a repo root (Claude Code, Codex); same server as `mcp.json` |
 | `.cursor-plugin/plugin.json` | Cursor Marketplace |
 | `server.json` | Official MCP Registry (`com.vmotif/vmotif`) |
 | `assets/` | Logos and icons |
@@ -53,3 +89,7 @@ Requires a Vmotif Pro, Team or Enterprise plan. Generations, captures, site scra
 ## Support
 
 https://vmotif.com/docs/support · Privacy: https://vmotif.com/privacy · Terms: https://vmotif.com/terms
+
+## Contributing
+
+This repository is published from Vmotif's private monorepo, so pull requests here can't be merged. To report a problem or suggest a change, open an issue or contact [support](https://vmotif.com/docs/support).

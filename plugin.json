@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "vmotif",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Work on Vmotif design canvases from your agent: read and edit canvases, generate images, video, code, SVG, shaders and HTML screens, and run saved workflows. Results land on a canvas next to the prompts and references that made them.",
   "author": { "name": "Webrenew", "url": "https://vmotif.com" },
   "homepage": "https://vmotif.com",
