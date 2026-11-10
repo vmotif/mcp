@@ -37,6 +37,8 @@ codex mcp login vmotif
 
 **Grok** — grok.com/connectors → New Connector → Custom, paste the URL.
 
+**Skill** — once connected, teach the agent the working loop with the [Vmotif skill](https://github.com/vmotif/skills): `npx skills add vmotif/skills`.
+
 ## Plans and cost
 
 Requires a Vmotif Pro, Team or Enterprise plan. Generations, captures, site scrapes and workflow runs spend your plan's GPU wallet; reading canvases, models and usage is free. If you belong to more than one workspace, the agent asks which one to bill.
