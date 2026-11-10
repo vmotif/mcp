@@ -76,6 +76,19 @@ The server exposes 26 tools. **Read-only** tools never change anything; **Writes
 | `update_canvas` | Update canvas | Destructive |  |
 <!-- tools:end -->
 
+## Events
+
+Instead of polling `get_generation` or `get_workflow_run`, an agent can subscribe to be told when work settles. The server implements the [MCP Events draft](https://github.com/modelcontextprotocol/experimental-ext-triggers-events) (`events/list`, `events/subscribe`, `events/unsubscribe`) with webhook delivery: each event is one signed POST to the URL you name, with [Standard Webhooks](https://www.standardwebhooks.com/) headers (`webhook-id`, `webhook-timestamp`, `webhook-signature`) and `X-MCP-Subscription-Id`. The URL is challenged once before a subscription is accepted, deliveries retry with backoff for a day, and a subscription expires unless it is refreshed (re-subscribe with the same name, arguments and URL). The [AI SDK](https://ai-sdk.dev/docs/ai-sdk-core/mcp-events) receives them with `experimental_createMCPEventWebhook`. Details, filters and payload fields: https://vmotif.com/docs/mcp#events
+
+<!-- events:start -->
+| Event | When |
+|---|---|
+| `generation.completed` | A generation this account started finished and its result is stored. Read it with get_generation; the asset is also placed on its canvas. |
+| `generation.failed` | A generation this account started failed, was abandoned by the queue, or was swept as stuck. A failed job is not charged unless the model had already produced output. |
+| `workflow_run.completed` | A headless workflow run (run_workflow, or the public API) finished with every output settled. Read the results with get_workflow_run. |
+| `workflow_run.failed` | A headless workflow run ended with a failure. Outputs that had completed are kept on the canvas. |
+<!-- events:end -->
+
 ## What's here
 
 | File | For |
