@@ -2,7 +2,7 @@
   "name": "vmotif",
   "displayName": "Vmotif",
   "description": "Work on Vmotif design canvases from Cursor: read and edit canvases, generate images, video, code, SVG, shaders and HTML screens, and run saved workflows.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": { "name": "Webrenew" },
   "publisher": "Webrenew",
   "homepage": "https://vmotif.com",
@@ -10,5 +10,5 @@
   "license": "MIT",
   "logo": "https://raw.githubusercontent.com/vmotif/mcp/main/assets/logo.png",
   "keywords": ["design", "canvas", "image-generation", "video-generation", "code-generation", "svg", "shader"],
-  "mcpServers": "./mcp.json"
+  "mcpServers": "./.mcp.json"
 }

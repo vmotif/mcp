@@ -91,12 +91,16 @@ Instead of polling `get_generation` or `get_workflow_run`, an agent can subscrib
 | `workflow_run.failed` | A headless workflow run ended with a failure. Outputs that had completed are kept on the canvas. |
 <!-- events:end -->
 
+## Agent Plugins compatibility
+
+`mcp.json` includes OpenAI's documented `com.openai` OAuth extension. The generic Agent Plugins 1.0.0 schema rejects that extension, so strict portable clients should use `.mcp.json` instead. It targets the same server and uses standard OAuth discovery. Cursor also references `.mcp.json`.
+
 ## What's here
 
 | File | For |
 |---|---|
-| `plugin.json`, `mcp.json` | Agent Plugins manifest (ChatGPT, Codex) |
-| `.mcp.json` | Project-scoped config for clients that read it from a repo root (Claude Code, Codex); same server as `mcp.json` |
+| `plugin.json`, `mcp.json` | Agent Plugins manifest with OpenAI OAuth metadata (ChatGPT and portable Codex plugins) |
+| `.mcp.json` | Schema-valid portable config for project-scoped and strict Agent Plugins clients (Claude Code, Codex CLI, Cursor) |
 | `.cursor-plugin/plugin.json` | Cursor Marketplace |
 | `server.json` | Official MCP Registry (`com.vmotif/vmotif`) |
 | `assets/` | Logos and icons |

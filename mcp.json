@@ -6,7 +6,7 @@
       "url": "https://vmotif.com/api/mcp",
       "extensions": {
         "com.openai": {
-          "auth": { "type": "oauth", "clientMode": "dcr" }
+          "auth": { "type": "oauth", "client": { "mode": "dcr" } }
         }
       }
     }

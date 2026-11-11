@@ -3,12 +3,7 @@
   "mcpServers": {
     "vmotif": {
       "type": "streamable-http",
-      "url": "https://vmotif.com/api/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": { "type": "oauth", "clientMode": "dcr" }
-        }
-      }
+      "url": "https://vmotif.com/api/mcp"
     }
   }
 }
